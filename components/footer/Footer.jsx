@@ -2,6 +2,8 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { SiIndeed } from "react-icons/si";
+import { MdCall } from "react-icons/md";
+import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -9,11 +11,29 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row gap-8 py-10 md:items-center justify-between leading-loose tracking-widest">
         <div className="flex flex-col">
           <label>Call me:</label>
-          <Link href={"tel:+2348089147905"}>+234-808-914-7905</Link>
+          <Link
+            href={"tel:+2348089147905"}
+            className="rounded-3xl text-sm bg-white text-black py-1 px-2 w-fit md:w-full flex gap-2 items-center"
+          >
+            <MdCall
+              size={20}
+              className="animate-pulse transition duration-1000 ease-in-out"
+            />
+            <p>+234-808-914-7905</p>
+          </Link>
         </div>
         <div className="flex flex-col">
           <label>Email:</label>
-          <Link href={"mailto:stevechude@gmail.com"}>stevechude@gmail.com</Link>
+          <Link
+            href={"mailto:stevechude@gmail.com"}
+            className="rounded-3xl text-sm bg-white text-black py-1 px-2 w-fit md:w-full flex gap-2 items-center"
+          >
+            <IoMdMail
+              size={20}
+              className="animate-pulse transition duration-1000 ease-in-out"
+            />
+            <p>stevechude@gmail.com</p>
+          </Link>
         </div>
         <div className="flex self-end md:self-center gap-10">
           <Link target="_blank" href={"https://github.com/stevechude"}>
