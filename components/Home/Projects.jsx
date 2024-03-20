@@ -38,14 +38,7 @@ const listProjects = [
     title: "Payslate Organizations App",
     description:
       "This is a Blog website built with next.js and styled with tailwind css. this was a personal project i built off hand without any pre-made designs. deployed on vercel",
-    link: "https://blog-by-steve.vercel.app/",
-  },
-  {
-    image: "/projects/blog.png",
-    title: "Blog Design",
-    description:
-      "This is a Blog website built with next.js and styled with tailwind css. this was a personal project i built off hand without any pre-made designs. deployed on vercel",
-    link: "https://blog-by-steve.vercel.app/",
+    link: "https://organization.payslate.com.ng/",
   },
 ];
 
