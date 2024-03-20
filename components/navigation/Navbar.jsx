@@ -8,6 +8,23 @@ import { FiMenu } from "react-icons/fi";
 import { FaRegWindowClose } from "react-icons/fa";
 import Link from "next/link";
 
+const heads = [
+  {
+    link: "https://github.com/stevechude",
+    icon: <FaGithub size={25} color="#fff" className="w-6 h-6 md:w-7 md:h-7" />,
+  },
+  {
+    link: "https://www.linkedin.com/in/steve-chude-6734a7191/",
+    icon: (
+      <FaLinkedin size={25} color="#fff" className="w-6 h-6 md:w-7 md:h-7" />
+    ),
+  },
+  {
+    link: "https://profile.indeed.com/?hl=en_NG&co=NG&from=gnav-jobseeker-profile--profile-one-frontend",
+    icon: <SiIndeed size={25} color="#fff" className="w-6 h-6 md:w-7 md:h-7" />,
+  },
+];
+
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
@@ -31,24 +48,17 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className="flex items-center gap-3">
-          <Link target="_blank" href={"https://github.com/stevechude"}>
-            <FaGithub color="#fff" />
-          </Link>
-          <Link
-            target="_blank"
-            href={"https://www.linkedin.com/in/steve-chude-6734a7191/"}
-          >
-            <FaLinkedin color="#fff" />
-          </Link>
-          <Link
-            target="_blank"
-            href={
-              "https://profile.indeed.com/?hl=en_NG&co=NG&from=gnav-jobseeker-profile--profile-one-frontend"
-            }
-          >
-            <SiIndeed color="#fff" />
-          </Link>
+        <div className="flex items-center gap-10">
+          {heads.map((dt, i) => (
+            <Link
+              key={i}
+              target="_blank"
+              href={dt.link}
+              className="transition-transform duration-300 transform hover:-translate-y-1"
+            >
+              {dt.icon}
+            </Link>
+          ))}
         </div>
       </div>
       {/* mobile */}
@@ -79,23 +89,16 @@ const Navbar = () => {
               </div>
 
               <div className="flex items-center gap-3 pb-2">
-                <Link target="_blank" href={"https://github.com/stevechude"}>
-                  <FaGithub color="#fff" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href={"https://www.linkedin.com/in/steve-chude-6734a7191/"}
-                >
-                  <FaLinkedin color="#fff" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href={
-                    "https://profile.indeed.com/?hl=en_NG&co=NG&from=gnav-jobseeker-profile--profile-one-frontend"
-                  }
-                >
-                  <SiIndeed color="#fff" />
-                </Link>
+                {heads.map((dt, i) => (
+                  <Link
+                    key={i}
+                    target="_blank"
+                    href={dt.link}
+                    className="transition-transform duration-300 transform hover:-translate-y-1"
+                  >
+                    {dt.icon}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

@@ -5,9 +5,27 @@ import { SiIndeed } from "react-icons/si";
 import { MdCall } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 
+const heads = [
+  {
+    link: "https://github.com/stevechude",
+    icon: <FaGithub size={25} color="#fff" className="w-6 h-6 md:w-7 md:h-7" />,
+  },
+  {
+    link: "https://www.linkedin.com/in/steve-chude-6734a7191/",
+    icon: (
+      <FaLinkedin size={25} color="#fff" className="w-6 h-6 md:w-7 md:h-7" />
+    ),
+  },
+  {
+    link: "https://profile.indeed.com/?hl=en_NG&co=NG&from=gnav-jobseeker-profile--profile-one-frontend",
+    icon: <SiIndeed size={25} color="#fff" className="w-6 h-6 md:w-7 md:h-7" />,
+  },
+];
+
 const Footer = () => {
   return (
     <div className="px-10 md:px-20 mt-8 bg-[#0f1624] border-t-4">
+      {/* <hr className="h-1 border-0 bg-gradient-to-r from-[#8168d4] to-[#41a4c8]" /> */}
       <div className="flex flex-col md:flex-row gap-8 py-10 md:items-center justify-between leading-loose tracking-widest">
         <div className="flex flex-col">
           <label>Call me:</label>
@@ -36,23 +54,16 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex self-end md:self-center gap-10">
-          <Link target="_blank" href={"https://github.com/stevechude"}>
-            <FaGithub size={25} color="#fff" />
-          </Link>
-          <Link
-            target="_blank"
-            href={"https://www.linkedin.com/in/steve-chude-6734a7191/"}
-          >
-            <FaLinkedin size={25} color="#fff" />
-          </Link>
-          <Link
-            target="_blank"
-            href={
-              "https://profile.indeed.com/?hl=en_NG&co=NG&from=gnav-jobseeker-profile--profile-one-frontend"
-            }
-          >
-            <SiIndeed size={25} color="#fff" />
-          </Link>
+          {heads.map((dt, i) => (
+            <Link
+              key={i}
+              target="_blank"
+              href={dt.link}
+              className="transition-transform duration-300 transform hover:-translate-y-1"
+            >
+              {dt.icon}
+            </Link>
+          ))}
         </div>
       </div>
     </div>
