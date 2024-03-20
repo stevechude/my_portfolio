@@ -9,7 +9,7 @@ const photos = [
   "/kilmanjaro.jpg",
   "/chair.JPG",
   "/pool.JPG",
-  "/slab.JPG",
+  // "/slab.JPG",
 ];
 
 const About = () => {
