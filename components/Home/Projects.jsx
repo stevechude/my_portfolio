@@ -40,6 +40,13 @@ const listProjects = [
       "This is a Blog website built with next.js and styled with tailwind css. this was a personal project i built off hand without any pre-made designs. deployed on vercel",
     link: "https://organization.payslate.com.ng/",
   },
+  {
+    image: "/projects/payslate2.png",
+    title: "Payslate",
+    description:
+      "This is a Blog website built with next.js and styled with tailwind css. this was a personal project i built off hand without any pre-made designs. deployed on vercel",
+    link: "https://payslate.com.ng/",
+  },
 ];
 
 const Projects = () => {
