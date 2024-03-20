@@ -1,9 +1,10 @@
+"use client";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navigation/Navbar";
-import Projects from "./projects/page";
-import Technologies from "./technologies/page";
-import AboutMe from "./about/page";
 import Footer from "@/components/footer/Footer";
+import Projects from "@/components/Home/Projects";
+import Technologies from "@/components/Home/Technologies";
+import About from "@/components/Home/About";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Technologies />
-      <AboutMe />
+      <About />
       <Footer />
     </main>
   );

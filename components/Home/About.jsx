@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const photos = [
   "/hotelbar.jpg",
@@ -10,8 +12,12 @@ const photos = [
   "/slab.JPG",
 ];
 
-const AboutMe = () => {
+const About = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,11 +28,23 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-6 px-10 md:px-20 mt-8 my-4">
-      <p className="font-semibold text-2xl">About Me</p>
+    <div id="about" className="flex flex-col gap-6 px-10 md:px-20 mt-8 my-4">
+      <p
+        className="font-semibold text-2xl"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        About Me
+      </p>
 
       <div className="flex flex-col md:flex-row gap-3 md:gap-4 md:h-fit justify-between">
-        <div className="w-full md:w-[30%]">
+        <div
+          className="w-full md:w-[30%]"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           <Image
             src={photos[currentPhotoIndex]}
             alt="My photo"
@@ -38,10 +56,20 @@ const AboutMe = () => {
         </div>
 
         <div className="md:w-[60%] flex flex-col gap-2 md:gap-5">
-          <p className="font-bold text-2xl md:text-3xl">
+          <p
+            className="font-bold text-2xl md:text-3xl"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             a little more about Steve
           </p>
-          <div className="text-sm md:text-base leading-relaxed md:leading-loose tracking-wider md:tracking-widest text-[#e7e3e3] flex flex-col gap-4 md:gap-5">
+          <div
+            className="text-sm md:text-base leading-relaxed md:leading-loose tracking-wider md:tracking-widest text-[#e7e3e3] flex flex-col gap-4 md:gap-5"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <p>
               {" "}
               I'm a proactive, smart, driven software engineer with 4 years of
@@ -64,4 +92,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default About;

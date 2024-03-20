@@ -7,6 +7,11 @@ import { SiIndeed } from "react-icons/si";
 import { FiMenu } from "react-icons/fi";
 import { FaRegWindowClose } from "react-icons/fa";
 import Link from "next/link";
+import {
+  Link as ScrollLink,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
 
 const heads = [
   {
@@ -30,25 +35,73 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="lg:flex items-center justify-between w-full py-6 px-10 text-xl hidden fixed bg-[#0f1624] z-50">
+      <div className="lg:flex items-center justify-between w-full py-6 md:py-5 px-10 text-xl hidden fixed bg-[#0f1624] z-50">
         <div className="flex items-center gap-3 cursor-pointer hover:font-semibold">
           <SiGamedeveloper />
-          <p>Portfolio</p>
+          <ScrollLink
+            activeClass="active"
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Portfolio
+          </ScrollLink>
         </div>
 
         <ul className="flex items-center gap-3 md:gap-6">
           <li className="border-b-2 cursor-pointer hover:font-semibold">
-            Projects
+            <ScrollLink
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Projects
+            </ScrollLink>
           </li>
           <li className="border-b-2 cursor-pointer hover:font-semibold">
-            Technologies
+            <ScrollLink
+              activeClass="active"
+              to="technologies"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Technologies
+            </ScrollLink>
           </li>
           <li className="border-b-2 cursor-pointer hover:font-semibold">
-            About Me
+            <ScrollLink
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              About
+            </ScrollLink>
+          </li>
+          <li className="border-b-2 cursor-pointer hover:font-semibold">
+            <ScrollLink
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Contact Me
+            </ScrollLink>
           </li>
         </ul>
 
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-8">
           {heads.map((dt, i) => (
             <Link
               key={i}
@@ -65,7 +118,16 @@ const Navbar = () => {
       <div className="flex md:hidden items-start justify-between w-full text-base py-4 px-5 fixed bg-[#0f1624] z-50">
         <div className="flex items-center gap-3">
           <SiGamedeveloper />
-          <p>Portfolio</p>
+          <ScrollLink
+            activeClass="active"
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Portfolio
+          </ScrollLink>
         </div>
 
         <div
@@ -83,9 +145,53 @@ const Navbar = () => {
             />
             <div className="flex flex-col items-center gap-6 p-2">
               <div className="flex flex-col items-center gap-6">
-                <p className="border-b">Projects</p>
-                <p className="border-b">Technologies</p>
-                <p className="border-b">About Me</p>
+                <ScrollLink
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="border-b"
+                >
+                  Projects
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="technologies"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="border-b"
+                >
+                  Technologies
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="border-b"
+                >
+                  About
+                </ScrollLink>
+
+                <ScrollLink
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="border-b"
+                >
+                  Contact Me
+                </ScrollLink>
               </div>
 
               <div className="flex items-center gap-3 pb-2">

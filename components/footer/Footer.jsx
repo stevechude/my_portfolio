@@ -24,7 +24,7 @@ const heads = [
 
 const Footer = () => {
   return (
-    <div className="px-10 md:px-20 mt-8 bg-[#0f1624] border-t-4">
+    <div id="contact" className="px-10 md:px-20 mt-8 bg-[#0f1624] border-t-4">
       {/* <hr className="h-1 border-0 bg-gradient-to-r from-[#8168d4] to-[#41a4c8]" /> */}
       <div className="flex flex-col md:flex-row gap-8 py-10 md:items-center justify-between leading-loose tracking-widest">
         <div className="flex flex-col">

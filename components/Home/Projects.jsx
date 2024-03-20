@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const listProjects = [
   {
@@ -48,14 +50,28 @@ const listProjects = [
 ];
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="flex flex-col gap-6 px-10 md:px-20 mt-8 my-4">
-      <p className="font-semibold text-2xl">Projects</p>
+    <div id="projects" className="flex flex-col gap-6 px-10 md:px-20 mt-8 my-4">
+      <p
+        className="font-semibold text-2xl"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        Projects
+      </p>
       <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 w-full">
         {listProjects.map((proj, i) => (
           <div
             key={i}
             className="border-2 border-[#656a72] rounded-tl-3xl rounded-tr-sm rounded-bl-sm rounded-br-3xl md:w-[38%]"
+            data-aos={`${i % 2 === 0 ? "fade-left" : "fade-right"}`}
+            data-aos-easing="linear"
+            data-aos-duration="1000"
           >
             <div className="p-3 md:p-4 flex flex-col gap-2">
               {/* image */}
