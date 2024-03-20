@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { SiGamedeveloper } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -32,10 +32,23 @@ const heads = [
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMobileMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   return (
     <>
-      <div className="lg:flex items-center justify-between w-full py-6 md:py-5 px-10 text-xl hidden fixed bg-[#0f1624] z-50">
+      <div className="lg:flex items-center justify-between w-full py-6 md:pb-5 md:pt-6 px-10 text-xl hidden fixed bg-[#0f1624] z-50">
         <div className="flex items-center gap-3 cursor-pointer hover:font-semibold">
           <SiGamedeveloper />
           <ScrollLink
@@ -137,7 +150,10 @@ const Navbar = () => {
           <FiMenu size={25} />
         </div>
         {mobileMenu && (
-          <div className="border border-white rounded-lg flex flex-col w-[50%] bg-[#0f1624]">
+          <div
+            ref={menuRef}
+            className="border border-white rounded-lg flex flex-col overflow-hidden w-[50%] absolute right-3 bg-[#0f1624]"
+          >
             <FaRegWindowClose
               onClick={() => setMobileMenu(false)}
               size={25}
@@ -196,12 +212,7 @@ const Navbar = () => {
 
               <div className="flex items-center gap-3 pb-2">
                 {heads.map((dt, i) => (
-                  <Link
-                    key={i}
-                    target="_blank"
-                    href={dt.link}
-                    className="transition-transform duration-300 transform hover:-translate-y-1"
-                  >
+                  <Link key={i} target="_blank" href={dt.link}>
                     {dt.icon}
                   </Link>
                 ))}
