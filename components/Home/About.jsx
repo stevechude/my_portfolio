@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 const photos = [
   "/hotelbar.jpg",
-  "/kilmanjaro.jpg",
+  // "/kilmanjaro.jpg",
   "/chair.JPG",
   "/pool.JPG",
   // "/slab.JPG",
