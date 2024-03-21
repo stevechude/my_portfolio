@@ -51,16 +51,16 @@ const Navbar = () => {
       <div className="lg:flex items-center justify-between w-full py-6 md:pb-5 md:pt-6 px-10 text-xl hidden fixed bg-[#0f1624] z-50">
         <div className="flex items-center gap-3 cursor-pointer hover:font-semibold">
           <SiGamedeveloper />
-          <ScrollLink
+          {/* <ScrollLink
             activeClass="active"
-            to="hero"
+            to={"hero"}
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
-          >
-            Portfolio
-          </ScrollLink>
+          > */}
+          <Link href={"/"}>Portfolio</Link>
+          {/* </ScrollLink> */}
         </div>
 
         <ul className="flex items-center gap-3 md:gap-6">

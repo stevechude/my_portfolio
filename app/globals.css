@@ -4,39 +4,21 @@
 
 body {
   color: #fff;
+  background-color: #0f1624;
 }
 
-.autoplay-progress {
-  position: absolute;
-  right: 16px;
-  top: 10px;
-  /* bottom: 16px; */
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--swiper-theme-color);
+.carousel-arrow {
+  @apply bg-gradient-to-r from-[#8168d4] to-[#41a4c8] text-white hover:text-black hover:bg-gradient-to-r hover:from-white hover:to-white rounded-full w-10 h-9 text-xl md:w-10 md:h-10 md:text-2xl my-auto;
 }
 
-.autoplay-progress svg {
-  --progress: 0;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  stroke-width: 4px;
-  stroke: var(--swiper-theme-color);
-  fill: none;
-  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-  stroke-dasharray: 125.6;
-  transform: rotate(-90deg);
+.carousel-pagination {
+  @apply flex gap-1 md:pt-4;
 }
 
-/* .mySwiper {
-  @apply h-[90%];
-} */
+.pagination-dot {
+  @apply rounded-full w-3 h-3 border border-white bg-[#41a4c8];
+}
+
+.activ {
+  @apply bg-white;
+}
