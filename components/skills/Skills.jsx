@@ -17,7 +17,7 @@ const Skills = () => {
         Additional technologies and soft skills
       </p>
       <div className="flex items-center justify-center">
-        <div className="md:grid md:grid-cols-3 flex flex-col w-full md:w-[50%] gap-4 md:gap-8 md:mx-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 w-full md:w-[50%] gap-4 md:gap-8 md:mx-10">
           {listSkills.map((skill, i) => (
             <div key={i} className="flex items-center gap-3">
               <div className="h-2 w-2 bg-white rounded-full" />

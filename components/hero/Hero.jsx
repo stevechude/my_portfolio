@@ -14,8 +14,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="hero" className="w-[100%] h-[30rem] md:h-[40rem] mt-16 md:pt-10">
-      <div className='bg-[url("/bg-pay.jpg")] bg-no-repeat object-cover bg-cover flex flex-col justify-center w-[100%] h-[100%]'>
+    <div id="hero" className="w-full h-[30rem] md:h-[40rem] mt-16 md:pt-10">
+      <div className='bg-[url("/bg-pay.jpg")] bg-no-repeat object-cover bg-cover flex flex-col justify-center w-full h-full'>
         <div className="flex flex-col justify-center gap-1 md:gap-3 p-6 px-10 md:px-20 md:w-[50%]">
           <p
             className="font-semibold text-lg md:text-3xl"

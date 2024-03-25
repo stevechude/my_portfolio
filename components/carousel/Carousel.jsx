@@ -47,7 +47,7 @@ const Carousel = ({ autoSlideInterval = 3000 }) => {
     <>
       <div className="w-full">
         <div
-          className="flex md:gap-6 transition-transform ease-out duration-500"
+          className="flex items-center md:gap-6 transition-transform ease-out duration-500"
           style={{
             transform: `translateX(-${(100 / numVisibleSlides) * curr}%)`,
           }}
@@ -55,7 +55,7 @@ const Carousel = ({ autoSlideInterval = 3000 }) => {
           {slides.map((proj, i) => (
             <div
               key={i}
-              className={`border-2 border-[#656a72] rounded-tl-3xl rounded-tr-sm rounded-bl-sm rounded-br-3xl mb-2 md:mb-0 flex-shrink-0 w-full md:w-96 h-96 md:h-[26rem]`}
+              className={`border-2 border-[#656a72] rounded-tl-3xl rounded-tr-sm rounded-bl-sm rounded-br-3xl mb-2 md:mb-0 flex-shrink-0 flex-auto w-full md:w-96 h-96 md:h-[26rem]`}
               data-aos={`${i % 2 === 0 ? "fade-left" : "fade-right"}`}
               data-aos-easing="linear"
               data-aos-duration="1000"
@@ -92,20 +92,20 @@ const Carousel = ({ autoSlideInterval = 3000 }) => {
             </div>
           ))}
         </div>
-        <div className="absolute right-0 left-0 top-[50%] md:top-[40%] bottom-[50%] flex items-center justify-between p-1 md:p-4">
+        <div className="absolute right-0 left-0 top-[50%] md:top-[40%] bottom-[50%] flex items-center justify-between p-1 px-2 md:p-4">
           <button
             onClick={prev}
-            style={{ boxShadow: "0px 0px 15px 2px #ccc" }}
-            className="p-1 rounded-full bg-white/80 text-gray-800 hover:bg-white"
+            // style={{ boxShadow: "0px 0px 15px 2px #ccc" }}
+            className="p-1 rounded-full shadow bg-white/50 text-gray-800 hover:bg-white w-8 h-8 flex items-center justify-center"
           >
-            <FaAngleLeft size={30} />
+            <FaAngleLeft size={25} />
           </button>
           <button
             onClick={next}
-            style={{ boxShadow: "0px 0px 15px 2px #ccc" }}
-            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            // style={{ boxShadow: "0px 0px 15px 2px #ccc" }}
+            className="p-1 rounded-full shadow bg-white/50 text-gray-800 hover:bg-white w-8 h-8 flex items-center justify-center"
           >
-            <FaAngleRight size={30} />
+            <FaAngleRight size={25} />
           </button>
         </div>
 

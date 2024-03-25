@@ -6,23 +6,24 @@ import { Oval } from "react-loader-spinner";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const photos = ["/hotelbar.jpg", "/chair.JPG", "/pool.JPG"];
+const photos = ["/hotelbar.jpg", "/pool.JPG"];
+// "/chair.JPG",
 
 const About = () => {
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  // const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [load, setLoad] = useState(false);
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const handleDownloadCV = () => {
     setLoad(true);
@@ -40,7 +41,10 @@ const About = () => {
   };
 
   return (
-    <div id="about" className="flex flex-col gap-6 px-10 md:px-20 mt-8 my-4">
+    <div
+      id="about"
+      className="flex flex-col gap-6 px-8 md:px-20 mt-8 my-4 w-full"
+    >
       <p
         className="font-semibold text-2xl"
         data-aos="fade-up"
@@ -51,23 +55,24 @@ const About = () => {
       </p>
 
       <div className="flex flex-col md:flex-row gap-3 md:gap-4 md:h-fit justify-between">
-        <div
-          className="w-full md:w-[30%]"
+        {/* <div
+          className="w-fit md:w-[30%]"
           data-aos="fade-left"
           data-aos-easing="linear"
           data-aos-duration="1000"
-        >
-          <Image
-            src={photos[currentPhotoIndex]}
-            alt="My photo"
-            // layout="responsive"
-            width={1000}
-            height={1000}
-            className="rounded-md w-[20rem] md:w-[25rem] md:h-[25rem] h-[20rem] object-cover"
-          />
-        </div>
+        > */}
+        <Image
+          // src={photos[currentPhotoIndex]}
+          src={"/hotelbar.jpg"}
+          alt="My photo"
+          layout="responsive"
+          width={1000}
+          height={1000}
+          className="rounded-md w-[20rem] md:w-[25rem] md:h-[25rem] h-[20rem] md:flex-1"
+        />
+        {/* </div> */}
 
-        <div className="md:w-[60%] flex flex-col gap-3 md:gap-5">
+        <div className="md:w-[60%] w-full flex flex-col gap-3 md:gap-5 md:flex-shrink">
           <p
             className="font-bold text-2xl md:text-3xl"
             data-aos="fade-up"
