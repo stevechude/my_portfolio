@@ -14,7 +14,7 @@ const Skills = () => {
   return (
     <div className="flex flex-col gap-10 mt-10 mb-4">
       <p className="font-semibold text-2xl">
-        Additional technologies and skills
+        Additional technologies and soft skills
       </p>
       <div className="flex items-center justify-center">
         <div className="md:grid md:grid-cols-3 flex flex-col w-full md:w-[50%] gap-4 md:gap-8 md:mx-10">
