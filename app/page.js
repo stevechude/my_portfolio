@@ -8,7 +8,7 @@ import About from "@/components/Home/About";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col relative overflow-hidden">
+    <main className="flex min-h-screen flex-col relative">
       <Navbar />
       <Hero />
       <Projects />

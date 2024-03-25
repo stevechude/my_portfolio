@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Navbar from "@/components/navigation/Navbar";
+import { SiGamedeveloper } from "react-icons/si";
 import Footer from "@/components/footer/Footer";
 
 const listProjects = [
@@ -67,7 +67,12 @@ const Projects = () => {
   return (
     <>
       <div className="flex min-h-screen flex-col overflow-hidden">
-        <Navbar />
+        <div className="lg:flex items-center justify-between w-full py-6 md:pb-5 md:pt-6 px-5 md:px-10 text-xl fixed bg-[#0f1624] z-50">
+          <div className="flex items-center gap-3 cursor-pointer hover:font-semibold">
+            <SiGamedeveloper />
+            <Link href={"/"}>Portfolio</Link>
+          </div>
+        </div>
         <div
           id="projects"
           className="flex flex-col gap-6 px-10 md:px-20 mt-24 md:mt-28 my-4"
