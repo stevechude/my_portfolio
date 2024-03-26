@@ -31,7 +31,7 @@ const Footer = () => {
           <label>Call me:</label>
           <Link
             href={"tel:+2348089147905"}
-            className="rounded-3xl text-sm bg-white text-black py-1 px-2 w-fit md:w-full flex gap-2 items-center"
+            className="rounded-3xl text-sm bg-white text-black py-1 px-2 w-fit md:w-full flex gap-2 items-center hover:bg-opacity-80"
           >
             <MdCall
               size={20}
@@ -44,7 +44,7 @@ const Footer = () => {
           <label>Email:</label>
           <Link
             href={"mailto:stevechude@gmail.com"}
-            className="rounded-3xl text-sm bg-white text-black py-1 px-2 w-fit md:w-full flex gap-2 items-center"
+            className="rounded-3xl text-sm bg-white text-black py-1 px-2 w-fit md:w-full flex gap-2 items-center hover:bg-opacity-80"
           >
             <IoMdMail
               size={20}

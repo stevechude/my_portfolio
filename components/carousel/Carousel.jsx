@@ -40,8 +40,15 @@ const Carousel = ({ autoSlideInterval = 3000 }) => {
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
 
-  const next = () =>
-    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+  // const next = () =>
+  //   setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+
+  const next = () => {
+    const maxIndex = slides.length - numVisibleSlides;
+    setCurr((curr) => (curr >= maxIndex ? 0 : curr + 1));
+  };
+
+  const dots = Array.from({ length: slides.length - numVisibleSlides + 1 });
 
   return (
     <>
@@ -55,7 +62,7 @@ const Carousel = ({ autoSlideInterval = 3000 }) => {
           {slides.map((proj, i) => (
             <div
               key={i}
-              className={`border-2 border-[#656a72] rounded-tl-3xl rounded-tr-sm rounded-bl-sm rounded-br-3xl mb-2 md:mb-0 flex-shrink-0 flex-auto w-full md:w-96 h-96 md:h-[26rem]`}
+              className={`border-2 border-[#656a72] rounded-tl-3xl rounded-tr-sm rounded-bl-sm rounded-br-3xl mb-2 md:mb-0 flex-shrink-0 flex-auto w-full md:w-96 h-96 md:h-auto lg:h-[26rem] overflow-y-auto`}
               data-aos={`${i % 2 === 0 ? "fade-left" : "fade-right"}`}
               data-aos-easing="linear"
               data-aos-duration="1000"
@@ -96,27 +103,27 @@ const Carousel = ({ autoSlideInterval = 3000 }) => {
           <button
             onClick={prev}
             // style={{ boxShadow: "0px 0px 15px 2px #ccc" }}
-            className="p-1 rounded-full shadow bg-white/50 text-gray-800 hover:bg-white w-8 h-8 flex items-center justify-center"
+            className="p-1 rounded-full shadow bg-white/50 text-gray-800 hover:bg-white w-6 h-6 md:w-8 md:h-8 flex items-center justify-center"
           >
-            <FaAngleLeft size={25} />
+            <FaAngleLeft className="md:w-6 md:h-6" />
           </button>
           <button
             onClick={next}
             // style={{ boxShadow: "0px 0px 15px 2px #ccc" }}
-            className="p-1 rounded-full shadow bg-white/50 text-gray-800 hover:bg-white w-8 h-8 flex items-center justify-center"
+            className="p-1 rounded-full shadow bg-white/50 text-gray-800 hover:bg-white w-6 h-6 md:w-8 md:h-8 flex items-center justify-center"
           >
-            <FaAngleRight size={25} />
+            <FaAngleRight className="md:w-6 md:h-6" />
           </button>
         </div>
 
         {/* indicators */}
         <div className="md:mt-4 py-1">
           <div className="flex items-center justify-center gap-2">
-            {slides.map((_, i) => (
+            {dots.map((_, i) => (
               <div
                 key={i}
-                className={`transition-all w-3 h-3 rounded-full bg-white ${
-                  curr === i ? "p-2" : "bg-opacity-50"
+                className={`transition-all w-2 h-2 rounded-full bg-white ${
+                  i === curr ? "p-0.5" : "bg-opacity-50"
                 }`}
               />
             ))}

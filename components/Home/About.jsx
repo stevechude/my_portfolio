@@ -6,24 +6,23 @@ import { Oval } from "react-loader-spinner";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const photos = ["/hotelbar.jpg", "/pool.JPG"];
-// "/chair.JPG",
+const photos = ["/hotelbar.jpg", "/pool.JPG", "/chair.JPG"];
 
 const About = () => {
-  // const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [load, setLoad] = useState(false);
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
-  //   }, 3000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
+    }, 3000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleDownloadCV = () => {
     setLoad(true);
@@ -55,22 +54,21 @@ const About = () => {
       </p>
 
       <div className="flex flex-col md:flex-row gap-3 md:gap-4 md:h-fit justify-between">
-        {/* <div
-          className="w-fit md:w-[30%]"
-          data-aos="fade-left"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-        > */}
-        <Image
-          // src={photos[currentPhotoIndex]}
-          src={"/hotelbar.jpg"}
-          alt="My photo"
-          layout="responsive"
-          width={1000}
-          height={1000}
-          className="rounded-md w-[20rem] md:w-[25rem] md:h-[25rem] h-[20rem] md:flex-1"
-        />
-        {/* </div> */}
+        <div
+          className="w-full md:w-[30%]"
+          // data-aos="fade-left"
+          // data-aos-easing="linear"
+          // data-aos-duration="1000"
+        >
+          <Image
+            src={photos[currentPhotoIndex]}
+            // src={"/hotelbar.jpg"}
+            alt="My photo"
+            width={1000}
+            height={1000}
+            className="rounded-md w-[20rem] md:w-[25rem] md:h-[25rem] h-[20rem] md:flex-1 object-cover"
+          />
+        </div>
 
         <div className="md:w-[60%] w-full flex flex-col gap-3 md:gap-5 md:flex-shrink">
           <p
@@ -116,7 +114,7 @@ const About = () => {
             </label>
             <button
               onClick={handleDownloadCV}
-              className="flex items-center gap-3 rounded-2xl text-sm md:text-base font-semibold bg-white text-black py-1 md:py-1.5 px-3 md:px-4"
+              className="flex items-center gap-3 rounded-2xl text-sm md:text-base font-semibold bg-white text-black py-1 md:py-1.5 px-3 md:px-4 hover:bg-opacity-80"
             >
               {load ? (
                 <div className="flex items-center justify-center gap-3">

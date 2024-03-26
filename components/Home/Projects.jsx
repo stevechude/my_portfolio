@@ -25,12 +25,12 @@ const Projects = () => {
       >
         Projects
       </p>
-      <div className="flex flex-col justify-center items-center gap-8 md:gap-10 w-full ">
-        {/* <Carousel /> */}
-        <NewCarousel />
+      <div className="flex flex-col justify-center items-center gap-4 w-full overflow-hidden">
+        <Carousel />
+        {/* <NewCarousel /> */}
         <button
           onClick={() => router.push("/see-projects")}
-          className="bg-gradient-to-r from-[#8168d4] to-[#41a4c8] rounded-3xl p-1 w-32 md:w-40 text-white self-center z-10"
+          className="bg-gradient-to-r from-[#8168d4] to-[#41a4c8] rounded-3xl p-1 w-32 md:w-40 text-white self-center z-10 hover:opacity-80"
         >
           View All
         </button>

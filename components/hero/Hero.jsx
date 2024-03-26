@@ -43,7 +43,7 @@ const Hero = () => {
             to my world.
           </p>
           <button
-            className="bg-gradient-to-r from-[#8168d4] to-[#41a4c8] rounded-3xl p-1 md:p-2 w-40 animate-bounce transition duration-1000 ease-in-out mt-4 cursor-pointer text-center"
+            className="bg-gradient-to-r from-[#8168d4] to-[#41a4c8] rounded-3xl p-1 md:p-2 w-40 animate-bounce transition duration-1000 ease-in-out mt-4 cursor-pointer text-center hover:opacity-80"
             data-aos="fade-right"
             data-aos-easing="linear"
             data-aos-duration="1000"

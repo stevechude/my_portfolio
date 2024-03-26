@@ -129,7 +129,7 @@ const Navbar = () => {
       </div>
       {/* mobile */}
       <div className="flex md:flex lg:hidden items-start justify-between w-full text-base py-4 px-5 fixed bg-[#0f1624] z-50">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5">
           <SiGamedeveloper />
           <ScrollLink
             activeClass="active"
