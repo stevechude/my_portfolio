@@ -37,11 +37,10 @@ const Carousel = ({ autoSlideInterval = 3000 }) => {
     };
   }, []);
 
-  const prev = () =>
-    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-
-  // const next = () =>
-  //   setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+  const prev = () => {
+    const maxIndex = slides.length - numVisibleSlides;
+    setCurr((curr) => (curr === 0 ? maxIndex : curr - 1));
+  };
 
   const next = () => {
     const maxIndex = slides.length - numVisibleSlides;
@@ -122,7 +121,7 @@ const Carousel = ({ autoSlideInterval = 3000 }) => {
             {dots.map((_, i) => (
               <div
                 key={i}
-                className={`transition-all w-2 h-2 rounded-full bg-white ${
+                className={`transition-all w-1.5 h-1.5 rounded-full bg-white ${
                   i === curr ? "p-0.5" : "bg-opacity-50"
                 }`}
               />

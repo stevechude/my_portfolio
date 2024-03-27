@@ -77,7 +77,7 @@ const About = () => {
             data-aos-easing="linear"
             data-aos-duration="1000"
           >
-            a little more about Steve
+            A little more about Steve
           </p>
           <div
             className="text-sm md:text-base leading-relaxed md:leading-loose tracking-wider md:tracking-widest text-[#e7e3e3] flex flex-col gap-4 md:gap-5"

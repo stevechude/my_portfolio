@@ -15,10 +15,10 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="flex flex-col md:gap-6 px-8 md:px-20 mt-8 my-4 relative w-full"
+      className="flex flex-col gap-4 md:gap-6 px-8 md:px-20 mt-8 my-4 relative w-full"
     >
       <p
-        className="font-semibold text-2xl px-10 md:px-0"
+        className="font-semibold text-2xl"
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="1000"
