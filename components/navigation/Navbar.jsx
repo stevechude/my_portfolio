@@ -64,7 +64,7 @@ const Navbar = () => {
         </div>
 
         <ul className="flex items-center gap-3 md:gap-6">
-          <li className="border-b-2 cursor-pointer hover:font-semibold">
+          <li className="cursor-pointer font-semibold transition-transform duration-300 transform hover:-translate-y-1">
             <ScrollLink
               activeClass="active"
               to="projects"
@@ -76,7 +76,7 @@ const Navbar = () => {
               Projects
             </ScrollLink>
           </li>
-          <li className="border-b-2 cursor-pointer hover:font-semibold">
+          <li className="cursor-pointer font-semibold transition-transform duration-300 transform hover:-translate-y-1">
             <ScrollLink
               activeClass="active"
               to="technologies"
@@ -88,7 +88,7 @@ const Navbar = () => {
               Technologies
             </ScrollLink>
           </li>
-          <li className="border-b-2 cursor-pointer hover:font-semibold">
+          <li className="cursor-pointer font-semibold transition-transform duration-300 transform hover:-translate-y-1">
             <ScrollLink
               activeClass="active"
               to="about"
@@ -100,7 +100,7 @@ const Navbar = () => {
               About
             </ScrollLink>
           </li>
-          <li className="border-b-2 cursor-pointer hover:font-semibold">
+          <li className="cursor-pointer font-semibold transition-transform duration-300 transform hover:-translate-y-1">
             <ScrollLink
               activeClass="active"
               to="contact"
