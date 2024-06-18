@@ -35,14 +35,14 @@ const listStack = [
     level: "80",
   },
   {
-    title: "Node",
+    title: "React Native (ios/android)",
     proficiency: "Expert",
     level: "60",
   },
   {
-    title: "Figma & Adobe",
-    proficiency: "Regular",
-    level: "50",
+    title: "Node",
+    proficiency: "Expert",
+    level: "60",
   },
 ];
 

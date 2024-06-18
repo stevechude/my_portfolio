@@ -31,15 +31,7 @@ const Hero = () => {
             data-aos-easing="linear"
             data-aos-duration="1000"
           >
-            {/* I am a proactive, smart, driven software engineer with 4 years of
-          development experience. I have developed software solutions for
-          business use cases from conceptualization to deployment. I am a
-          proficient React.Js, Next.Js, Angular, JavaScript and TypeScript
-          developer. Softwares i have built includes Fintech Payment Website,
-          Health Tech solution, logistics web app, etc. I have great
-          communication skills, problem solving, decision making and a team
-          player. */}
-            A Frontend Developer with 4 years of development experience. Welcome
+            A Frontend Developer with 5 years of development experience. Welcome
             to my world.
           </p>
           <button
