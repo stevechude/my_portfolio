@@ -87,7 +87,7 @@ const About = () => {
           >
             <p>
               {" "}
-              I'm a proactive, smart, driven software engineer with 4 years of
+              I'm a proactive, smart, driven software engineer with 5 years of
               development experience. I have developed software solutions for
               business use cases from conceptualization to deployment.
             </p>
