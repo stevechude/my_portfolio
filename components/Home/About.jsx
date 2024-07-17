@@ -92,9 +92,9 @@ const About = () => {
               business use cases from conceptualization to deployment.
             </p>
             <p>
-              Proficient in React.Js, Next.Js, Angular, JavaScript and
-              TypeScript. Softwares i have built includes Fintech Payment
-              Website, Health Tech solution, logistics web app, etc.
+              Proficient in React.Js, Next.Js, JavaScript and TypeScript.
+              Softwares i have built includes Fintech Payment Website, Health
+              Tech solution, logistics web app, etc.
             </p>
             <p>
               I have great communication skills, problem solving, decision
