@@ -1,10 +1,17 @@
 export const listProjects = [
   {
-    image: "/projects/portfolio.png",
-    title: "Steve's Portfolio",
+    image: "/projects/jvec.png",
+    title: "JVEC Movers Website",
     description:
-      "This is a Blog website built with next.js and styled with tailwind css. this was a personal project i built off hand without any pre-made designs. deployed on vercel",
-    link: "https://steve-chude.vercel.app/",
+      "This is a website i built for a client `JVEC Solutions`, Their mission is to provide stress-free, efficient, and courteous moving and cleaning services, ensuring seamless transitions for both residential and commercial clients.",
+    link: "https://steve-jvec-task.netlify.app/",
+  },
+  {
+    image: "/projects/tma.png",
+    title: "Project Management App",
+    description:
+      "This app is called `Task Management App`, it functions like a project management tool that allows user to access a dashboard where they can create multiple projects. Each project can be view individually and a series of tasks can be created with a due date and assigned to anyone and have its progress monitored.",
+    link: "https://tma-by-steve.vercel.app/",
   },
   {
     image: "/projects/bottleking.png",
@@ -19,13 +26,6 @@ export const listProjects = [
     description:
       "A responsive crypto website fetched from coingecko’s api as third-party, built with react js and styled with tailwind css, with an addition of a firebase backend with full user authentications and route protections.",
     link: "https://cryptobase-website.netlify.app/",
-  },
-  {
-    image: "/projects/foodmine.png",
-    title: "Food Ordering App (In Progress)",
-    description:
-      "A foodmine website built with angular, it represents a food commerce app with the following features (view all available foods, view foods by categories, click on a particular food, add food to cart, view cart page).",
-    link: "https://foodmine-app.vercel.app/",
   },
   {
     image: "/projects/gift-card.png",
