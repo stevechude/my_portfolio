@@ -1,10 +1,17 @@
 export const listProjects = [
+  // {
+  //   image: "/projects/jvec.png",
+  //   title: "JVEC Movers Website",
+  //   description:
+  //     "This is a website i built for a client `JVEC Solutions`, Their mission is to provide stress-free, efficient, and courteous moving and cleaning services, ensuring seamless transitions for both residential and commercial clients.",
+  //   link: "https://steve-jvec-task.netlify.app/",
+  // },
   {
-    image: "/projects/jvec.png",
-    title: "JVEC Movers Website",
+    image: "/projects/incite360.png",
+    title: "incite360 App",
     description:
-      "This is a website i built for a client `JVEC Solutions`, Their mission is to provide stress-free, efficient, and courteous moving and cleaning services, ensuring seamless transitions for both residential and commercial clients.",
-    link: "https://steve-jvec-task.netlify.app/",
+      "Skip the hassle of creating surveys across different platforms. With a few clicks, you can create NPS, CES and other customer feedback from one platform and track the performance in a central dashboard.",
+    link: "https://app.theincite360.com",
   },
   {
     image: "/projects/tma.png",
