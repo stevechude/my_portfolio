@@ -16,18 +16,32 @@ const listProjects = [
   //   link: "https://steve-jvec-task.netlify.app/",
   // },
   {
+    image: "/projects/RIB.png",
+    title: "Retail Internet Banking",
+    description:
+      "Led frontend development and enhancement of Keystone Bank's Retail Internet Banking platform, a secure digital banking solution that enables customers to authenticate, view account information, transfer funds, pay bills, manage beneficiaries, monitor transaction history, and perform self-service banking operations online. Worked on scalable frontend architecture, API integrations, transaction workflows, security-focused user experiences, and digital banking features that supported thousands of retail banking customers across web channels.",
+    link: "https://retailibank.keystonebankng.com/",
+  },
+  {
     image: "/projects/incite360.png",
     title: "incite360 App",
     description:
       "Skip the hassle of creating surveys across different platforms. With a few clicks, you can create NPS, CES and other customer feedback from one platform and track the performance in a central dashboard.",
     link: "https://app.theincite360.com",
   },
+  // {
+  //   image: "/projects/tma.png",
+  //   title: "Project Management App",
+  //   description:
+  //     "This app is called `Task Management App`, it functions like a project management tool that allows user to access a dashboard where they can create multiple projects. Each project can be view individually and a series of tasks can be created with a due date and assigned to anyone and have its progress monitored.",
+  //   link: "https://tma-by-steve.vercel.app/",
+  // },
   {
-    image: "/projects/tma.png",
-    title: "Project Management App",
+    image: "/projects/RIB.png",
+    title: "Retail Internet Banking",
     description:
-      "This app is called `Task Management App`, it functions like a project management tool that allows user to access a dashboard where they can create multiple projects. Each project can be view individually and a series of tasks can be created with a due date and assigned to anyone and have its progress monitored.",
-    link: "https://tma-by-steve.vercel.app/",
+      "Led frontend development and enhancement of Keystone Bank's Retail Internet Banking platform, a secure digital banking solution that enables customers to authenticate, view account information, transfer funds, pay bills, manage beneficiaries, monitor transaction history, and perform self-service banking operations online. Worked on scalable frontend architecture, API integrations, transaction workflows, security-focused user experiences, and digital banking features that supported thousands of retail banking customers across web channels.",
+    link: "https://retailibank.keystonebankng.com/",
   },
   {
     image: "/projects/bottleking.png",
