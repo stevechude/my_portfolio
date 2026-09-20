@@ -36,13 +36,13 @@ const listProjects = [
   //     "This app is called `Task Management App`, it functions like a project management tool that allows user to access a dashboard where they can create multiple projects. Each project can be view individually and a series of tasks can be created with a due date and assigned to anyone and have its progress monitored.",
   //   link: "https://tma-by-steve.vercel.app/",
   // },
-  {
-    image: "/projects/RIB.png",
-    title: "Retail Internet Banking",
-    description:
-      "Led frontend development and enhancement of Keystone Bank's Retail Internet Banking platform, a secure digital banking solution that enables customers to authenticate, view account information, transfer funds, pay bills, manage beneficiaries, monitor transaction history, and perform self-service banking operations online. Worked on scalable frontend architecture, API integrations, transaction workflows, security-focused user experiences, and digital banking features that supported thousands of retail banking customers across web channels.",
-    link: "https://retailibank.keystonebankng.com/",
-  },
+  // {
+  //   image: "/projects/RIB.png",
+  //   title: "Retail Internet Banking",
+  //   description:
+  //     "Led frontend development and enhancement of Keystone Bank's Retail Internet Banking platform, a secure digital banking solution that enables customers to authenticate, view account information, transfer funds, pay bills, manage beneficiaries, monitor transaction history, and perform self-service banking operations online. Worked on scalable frontend architecture, API integrations, transaction workflows, security-focused user experiences, and digital banking features that supported thousands of retail banking customers across web channels.",
+  //   link: "https://retailibank.keystonebankng.com/",
+  // },
   {
     image: "/projects/bottleking.png",
     title: "BottleKing Website",
